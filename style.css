@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #D1E9F6;
+}
+.menu{
+    width: 100%;
+}
+.menu ul{
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    font-size: 13px;
+    list-style: none;
+}
+.menu ul li{
+    height: 50px;
+    color: #D1E9F6;
+    background-color: #16325B;
+    line-height: 50px;
+    display: inherit;
+    padding: 0 5px;
+    font-weight: 600;
+    border: 1px solid #96CEB4;
+    width: 170px;
+    position: relative;
+}
+.menu ul ul{
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+}
+.menu li:hover{
+    padding-left: 10px;
+    background-color: #96CEB4;
+    color: #16325B;
+    transition: all 0.5s ease;
+}
+ul li:hover>ul{
+    display: block;
+}
+ul li:hover li{
+    width: 200px;
+}
+.menu ul ul ul{
+    top: 0;
+    left: 200px;
+}
+.menubar{
+    display: none;
+}
+.fa-bars{
+    margin: 10px;
+}
+ul li i{
+    margin-top: 18px;
+    width: 20px;
+    height: 30px;
+}
+.header img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+.header{
+    padding: 10px 0;
+    display: flex;
+    background-color: #F6EACB;
+    justify-content: center;
+    gap: 20px;
+}
+.head{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: default;
+}
+.head p{
+    font-size: 11px;
+    font-weight: 600;
+    color: #A02334;
+}
+.head h1{
+    font-size: 40px;
+    font-weight: 800;
+    color: #00712D;
+}
+.photos{
+    width: 1000px;
+    height: auto;
+    margin: auto;
+}
+.photo{
+    display: none;
+}
+.photo img{
+    width: 1000px;
+}
+.optical{
+    animation: fade 1s;
+}
+@keyframes fade {
+    from{opacity: 0.4;}
+    to{opacity: 1;}
+}
+@media screen and (max-width: 500px) {
+    .header{
+        display: block;
+        text-align: center;
+    }
+    .header .head h1{
+        font-size: 28px;
+    }
+    .header img{
+        width: 80px;
+        height: 80px;
+    }
+    .header .head p{
+        font-size: 8px;
+    }
+    .photos{
+        width: 100%;
+    }
+    .photo img{
+        width: 100%;
+    }
+    .menu ul{
+        display: block;
+    }
+    .menu ul li{
+        height: auto;
+        width: 100%;
+    }
+    .menu ul li:hover ul{
+        position: sticky;
+        border: 1px solid #16325B;
+    }
+    ul ul{
+        margin-left: 40px;
+    }
+    ul li:hover li{
+        width: 100%;
+    }
+    .menubar{
+        display: block;
+        background-color: #d3418873;
+    }
+    .dropdown{
+        display: none;
+    }
+
+}
